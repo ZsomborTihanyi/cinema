@@ -27,7 +27,7 @@ public class Movie {
 	
 	@Column
 	@NotNull
-	private Integer runtime;
+	private String runtime;
 	
 	@Column
 	private String description;
