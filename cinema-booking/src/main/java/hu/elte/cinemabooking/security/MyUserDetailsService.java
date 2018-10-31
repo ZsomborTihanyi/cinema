@@ -4,8 +4,7 @@ import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
-import javax.transaction.Transactional;
-
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -16,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import hu.elte.cinemabooking.entities.User;
 import hu.elte.cinemabooking.repositories.UserRepository;
+import hu.elte.cinemabooking.security.AuthenticatedUser;
 
 @Service
 public class MyUserDetailsService implements UserDetailsService {
