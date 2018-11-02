@@ -7,11 +7,8 @@ insert into hall (hall_name, number_of_rows, number_of_columns) values ('Darth V
 insert into hall (hall_name, number_of_rows, number_of_columns) values ('Luke Skywalker terem', 20, 25);
 insert into hall (hall_name, number_of_rows, number_of_columns) values ('Yoda', 15, 20);
 
-insert into screening (movie_name_id, screening_time) values ('Star Wars IV - A New Hope', '12:00');
-insert into screening (movie_name_id, screening_time) values ('Star Wars VI - Return of the Jedi', '16:15');
+insert into screening (hall_id, movie_name_id, screening_time) values (1, 'Star Wars IV - A New Hope', '12:00');
+insert into screening (hall_id, movie_name_id, screening_time) values (1, 'Star Wars VI - Return of the Jedi', '16:15');
 
 insert into user (username, password, enabled, role) values ('admin', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..', true, 'ROLE_ADMIN');
 insert into user (username, password, enabled, role) values ('user', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..', true, 'ROLE_USER');
-
-insert into screening_times (hall_id, screening_id) values (1, 1);
-insert into screening_times (hall_id, screening_id) values (1, 2);

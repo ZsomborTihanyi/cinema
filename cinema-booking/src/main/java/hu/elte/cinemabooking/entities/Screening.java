@@ -36,4 +36,8 @@ public class Screening {
 	@NotNull
 	private String screeningTime;
 	
+	@ManyToOne
+	@JoinColumn(name = "HALL_ID")
+	private Hall hall;
+	
 }
