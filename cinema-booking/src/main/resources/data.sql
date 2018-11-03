@@ -15,9 +15,9 @@ insert into user (username, password, enabled, role) values ('han', '$2a$04$YDiv
 insert into user (username, password, enabled, role) values ('luke', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..', true, 'ROLE_USER');
 insert into user (username, password, enabled, role) values ('chewie', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..', true, 'ROLE_USER');
 
-insert into booking (user_id, number_of_seats, price, payment_method) values (2, 3, 3000, 'maestro');
-insert into booking (user_id, number_of_seats, price, payment_method) values (3, 2, 2000, 'visa');
-insert into booking (user_id, number_of_seats, price, payment_method) values (4, 1, 1000, 'kp');
+insert into booking (user_id, screening_id, number_of_seats, price, payment_method) values (2, 1, 3, 3000, 'maestro');
+insert into booking (user_id, screening_id, number_of_seats, price, payment_method) values (3, 2, 2, 2000, 'visa');
+insert into booking (user_id, screening_id, number_of_seats, price, payment_method) values (4, 2, 1, 1000, 'kp');
 
 insert into reserved_seat (booking_id, hall_id, column, row) values (1, 1, 'A', 1);
 insert into reserved_seat (booking_id, hall_id, column, row) values (1, 1, 'A', 2);

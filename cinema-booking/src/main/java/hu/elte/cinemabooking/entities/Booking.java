@@ -54,5 +54,9 @@ public class Booking {
     @JsonIgnoreProperties({"reservedSeatId"})
     private List<ReservedSeat> reservedSeats;
     
+    @ManyToOne
+    @JoinColumn(name = "SCREENING_ID")
+    private Screening screening;
+    
     
 }
