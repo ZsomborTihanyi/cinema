@@ -10,6 +10,7 @@ import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -38,6 +39,7 @@ public class Screening {
 	
 	@ManyToOne
 	@JoinColumn(name = "HALL_ID")
+	@JsonIgnoreProperties({"numberOfRows", "numberOfColumns"})
 	private Hall hall;
 	
 }

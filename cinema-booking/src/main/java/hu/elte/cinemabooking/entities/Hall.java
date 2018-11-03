@@ -27,11 +27,11 @@ public class Hall {
 	@Id
 	@Column(name = "HALL_ID")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer hallId;
 	
 	@Column(name = "HALL_NAME")
 	@NotNull
-	private String hallNameId;
+	private String hallName;
 	
 	@Column(name = "NUMBER_OF_ROWS")
 	@NotNull
