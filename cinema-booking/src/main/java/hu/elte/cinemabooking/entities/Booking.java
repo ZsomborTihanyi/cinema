@@ -1,5 +1,7 @@
 package hu.elte.cinemabooking.entities;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
@@ -56,4 +59,9 @@ public class Booking {
     @Column(name = "PAYMENT_METHOD")
     @NotNull
     private String paymentMethod;
+    
+    @OneToMany(mappedBy = "booking")
+    @JsonIgnoreProperties({"reservedSeatId"})
+    private List<ReservedSeat> reservedSeats;
+    
 }

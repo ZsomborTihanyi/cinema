@@ -5,7 +5,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -17,7 +21,7 @@ public class ReservedSeat {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer bookedSeatId;
+	private Integer reservedSeatId;
 	
 	@Column(name = "COLUMN")
 	@NotNull
@@ -26,4 +30,9 @@ public class ReservedSeat {
 	@Column(name = "ROW")
 	@NotNull
 	private Integer row;
+	
+	@ManyToOne
+	@JoinColumn(name = "BOOKING_ID")
+	@JsonIgnore
+	private Booking booking;
 }
