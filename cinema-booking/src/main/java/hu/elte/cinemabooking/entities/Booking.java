@@ -56,6 +56,7 @@ public class Booking {
     
     @ManyToOne
     @JoinColumn(name = "SCREENING_ID")
+    @JsonIgnoreProperties({"id"})
     private Screening screening;
     
     
