@@ -7,19 +7,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import hu.elte.cinemabooking.entities.Booking;
-import hu.elte.cinemabooking.repositories.BookingRepository;
+import hu.elte.cinemabooking.entities.ReservedSeat;
+import hu.elte.cinemabooking.repositories.ReservedSeatRepository;
 
 @Secured({"ROLE_ADMIN"})
 @RestController
-@RequestMapping("/bookings")
-public class BookingController {
-    
-    @Autowired
-    private BookingRepository bookingRepository;
-    
-    @GetMapping("")
-	public ResponseEntity<Iterable<Booking>> getAll() {
-		return ResponseEntity.ok(bookingRepository.findAll());
+@RequestMapping("/reservedseats")
+public class ReservedSeatController {
+	
+	@Autowired
+	private ReservedSeatRepository reservedSeatRepository;
+	
+	@GetMapping("")
+	public ResponseEntity<Iterable<ReservedSeat>> getAll() {
+		return ResponseEntity.ok(reservedSeatRepository.findAll());
 	}
 }

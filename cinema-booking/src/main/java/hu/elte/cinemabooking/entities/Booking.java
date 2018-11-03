@@ -24,7 +24,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-
 public class Booking {
     @Id
     @Column(name = "BOOKING_ID")
