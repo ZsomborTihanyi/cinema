@@ -11,4 +11,12 @@ insert into screening (hall_id, movie_name_id, screening_time) values (1, 'Star 
 insert into screening (hall_id, movie_name_id, screening_time) values (1, 'Star Wars VI - Return of the Jedi', '16:15');
 
 insert into user (username, password, enabled, role) values ('admin', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..', true, 'ROLE_ADMIN');
-insert into user (username, password, enabled, role) values ('user', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..', true, 'ROLE_USER');
+insert into user (username, password, enabled, role) values ('han', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..', true, 'ROLE_USER');
+insert into user (username, password, enabled, role) values ('luke', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..', true, 'ROLE_USER');
+insert into user (username, password, enabled, role) values ('han', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..', true, 'ROLE_USER');
+
+insert into booking (user_id, number_of_seats, price, payment_method) values (2, 3, 3000, 'maestro');
+insert into booking (user_id, number_of_seats, price, payment_method) values (3, 2, 2000, 'visa');
+insert into booking (user_id, number_of_seats, price, payment_method) values (4, 1, 1000, 'kp');
+
+

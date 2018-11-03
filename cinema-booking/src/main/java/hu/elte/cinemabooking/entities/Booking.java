@@ -8,8 +8,11 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -38,10 +41,11 @@ public class Booking {
     private Hall hallNameID;
     */
     
-    @Column(name = "SCREENING_TIME")
-    @NotNull
-    private Integer screeningTime;
-    
+    @OneToOne
+    @JoinColumn(name = "USER_ID")
+    @JsonIgnoreProperties({"userId","password","enabled","role"})
+    private User user;
+
     @Column(name = "NUMBER_OF_SEATS")
     @NotNull
     private Integer numberOfSeats;
