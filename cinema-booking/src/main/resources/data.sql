@@ -19,5 +19,6 @@ insert into booking (user_id, number_of_seats, price, payment_method) values (2,
 insert into booking (user_id, number_of_seats, price, payment_method) values (3, 2, 2000, 'visa');
 insert into booking (user_id, number_of_seats, price, payment_method) values (4, 1, 1000, 'kp');
 
-insert into reserved_seat (booking_id, column, row) values (1, 'A', 1);
-insert into reserved_seat (booking_id, column, row) values (1, 'A', 2);
+insert into reserved_seat (booking_id, hall_id, column, row) values (1, 1, 'A', 1);
+insert into reserved_seat (booking_id, hall_id, column, row) values (1, 1, 'A', 2);
+insert into reserved_seat (booking_id, hall_id, column, row) values (1, 1, 'A', 3);

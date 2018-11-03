@@ -45,5 +45,7 @@ public class Hall {
 	@JsonIgnore
 	private List<Screening> screenings;
 	
-	
+	@OneToMany(mappedBy = "hall")
+	@JsonIgnore
+	private List<ReservedSeat> reservedSeats;
 }

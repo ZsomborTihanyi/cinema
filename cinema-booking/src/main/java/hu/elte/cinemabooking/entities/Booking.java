@@ -32,16 +32,6 @@ public class Booking {
     @Column(name = "BOOKING_ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-     
-    /* //ez nem biztos
-    @ManyToOne
-    @JoinColumn(name = "USERNAME_ID")
-    private User userNameId;
-    
-    @ManyToOne
-    @JoinColumn(name = "HALL_NAME_ID")
-    private Hall hallNameID;
-    */
     
     @OneToOne
     @JoinColumn(name = "USER_ID")
@@ -63,5 +53,6 @@ public class Booking {
     @OneToMany(mappedBy = "booking")
     @JsonIgnoreProperties({"reservedSeatId"})
     private List<ReservedSeat> reservedSeats;
+    
     
 }
