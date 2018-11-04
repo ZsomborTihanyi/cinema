@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import hu.elte.cinemabooking.entities.Hall;
-import hu.elte.cinemabooking.entities.Screening;
 import hu.elte.cinemabooking.repositories.HallRepository;
 
 @RestController
