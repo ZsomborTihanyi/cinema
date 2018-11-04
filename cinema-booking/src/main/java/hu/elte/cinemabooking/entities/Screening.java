@@ -32,10 +32,6 @@ public class Screening {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	@Column(name = "MOVIE_NAME_ID")
-	@NotNull
-	private String movieNameId;
-	
 	@Column(name = "SCREENING_TIME")
 	@NotNull
 	private String screeningTime;
@@ -49,4 +45,7 @@ public class Screening {
 	@JsonIgnore
 	private List<Booking> bookings;
 	
+	@ManyToOne
+	@JoinColumn(name = "MOVIE_ID")
+	private Movie movie;
 }
