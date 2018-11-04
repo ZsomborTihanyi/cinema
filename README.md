@@ -33,6 +33,14 @@ Egy mozi pénztár online felületének megvalósítása.
   * Értékelheti a filmeket.
 * Adminisztrátor
   * Módosíthatja, vagy törölheti a vetítéseket, szélsőséges esetben a felhasználókat is.
+  
+ER diagram:
+![alt text](https://github.com/ZsomborTihanyi/cinema/blob/master/ER_Diagram.png)
 
-Egy végpont működése
+EK diagrammok különböző jogosulságok esetén:
+![alt text](https://github.com/ZsomborTihanyi/cinema/blob/master/guestEK.png)
+![alt text](https://github.com/ZsomborTihanyi/cinema/blob/master/registereduserEK.png)
+![alt text](https://github.com/ZsomborTihanyi/cinema/blob/master/administratorEK.png)
+
+Egy végpont működése:
 ![alt text](https://github.com/ZsomborTihanyi/cinema/blob/master/EK%20diagram.png)
