@@ -35,4 +35,4 @@ Egy mozi pénztár online felületének megvalósítása.
   * Módosíthatja, vagy törölheti a vetítéseket, szélsőséges esetben a felhasználókat is.
 
 Egy végpont működése
-![alt text](cinema/EK diagram.png)
+![alt text](https://github.com/ZsomborTihanyi/cinema/blob/master/EK%20diagram.png)
