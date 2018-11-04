@@ -35,7 +35,7 @@ public class Booking {
     
     @OneToOne
     @JoinColumn(name = "USER_ID")
-    @JsonIgnoreProperties({"userId","password","enabled","role"})
+    @JsonIgnoreProperties({"userId","password","enabled","role","movies"})
     private User user;
 
     @Column(name = "NUMBER_OF_SEATS")

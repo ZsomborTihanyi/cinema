@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 
@@ -47,4 +49,8 @@ public class Movie {
 	@OneToMany(mappedBy = "movie")
 	@JsonIgnore
 	private List<Screening> screenings;
+	
+	@ManyToMany(mappedBy = "movies")
+	@JsonIgnore
+	private List<User> users;
 }

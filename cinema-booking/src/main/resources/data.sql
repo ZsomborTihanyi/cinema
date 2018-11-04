@@ -22,3 +22,6 @@ insert into booking (user_id, screening_id, number_of_seats, price, payment_meth
 insert into reserved_seat (booking_id, hall_id, column, row) values (1, 1, 'A', 1);
 insert into reserved_seat (booking_id, hall_id, column, row) values (1, 1, 'A', 2);
 insert into reserved_seat (booking_id, hall_id, column, row) values (1, 1, 'A', 3);
+
+insert into seen_by (user_id, movie_id) values (2,1);
+insert into seen_by (user_id, movie_id) values (2,2);
