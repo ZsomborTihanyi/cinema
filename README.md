@@ -33,3 +33,6 @@ Egy mozi pénztár online felületének megvalósítása.
   * Értékelheti a filmeket.
 * Adminisztrátor
   * Módosíthatja, vagy törölheti a vetítéseket, szélsőséges esetben a felhasználókat is.
+
+Egy végpont működése
+![alt text](cinema/EK diagram.png)
