@@ -1,0 +1,8 @@
+<mat-button-toggle-group [value]="selectedStatus"
+  (change)="onFilterChange($event)"
+>
+  <mat-button-toggle value="">All</mat-button-toggle>
+  <mat-button-toggle value="SCI-FI">Sci-fi</mat-button-toggle>
+  <mat-button-toggle value="COMEDY">Comedy</mat-button-toggle>
+  <mat-button-toggle value="ANIMATION">Animation</mat-button-toggle>
+</mat-button-toggle-group>
