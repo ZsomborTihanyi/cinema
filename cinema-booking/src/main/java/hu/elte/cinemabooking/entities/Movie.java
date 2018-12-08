@@ -32,9 +32,9 @@ public class Movie {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer movieId;
 	
-	@Column(name = "MOVIE_NAME")
+	@Column(name = "NAME")
 	@NotNull
-	private String movieName;
+	private String name;
 	
 	@Column(nullable = false)
 	@Enumerated(EnumType.STRING)
