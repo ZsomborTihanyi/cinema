@@ -1,3 +1,23 @@
-<p>
-  movie-list works!
-</p>
+<h2>Movies</h2>
+
+<genre-filter [genre]="selectedGenre"
+  (change)="onFilterChange($event)"
+></genre-filter>
+
+<mat-grid-list cols="2" rowHeight="2:1">
+  <a *ngFor="let movie of filteredMovies" mat-grid-tile
+    (click)="selectedMovie = movie"
+    [class.selected]="movie === selectedMovie"
+    [routerLink]="['/movies', movie.id]"
+  >
+    <mat-icon *ngIf="movie.genre === 'SCI-FI'"   matListIcon style="color: green">android</mat-icon>
+    <mat-icon *ngIf="movie.genre === 'COMEDY'" matListIcon style="color: yellow">sentiment_very_satisfied</mat-icon>
+    <mat-icon *ngIf="movie.genre === 'ANIMATION'"  matListIcon style="color: brown">brush</mat-icon>
+    <h3 matLine>{{ movie.title }}</h3>
+    <small matLine>
+      <mat-icon>place</mat-icon> {{ movie.place }}
+      <mat-icon>access_time</mat-icon> {{ movie.updated_at }}
+    </small>
+    <p matLine>{{ movie.description }}</p>
+  </a>
+</mat-nav-list>
