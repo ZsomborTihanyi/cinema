@@ -31,6 +31,16 @@ public class MovieController {
 		return ResponseEntity.ok(movieRepository.findAll());
 	}
 	
+	@GetMapping("/{id}")
+    public ResponseEntity<Movie> get(@PathVariable Integer id) {
+        Optional<Movie> issue = movieRepository.findById(id);
+        if (issue.isPresent()) {
+            return ResponseEntity.ok(issue.get());
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+	
 	@Secured({"ROLE_ADMIN"})
 	@PostMapping("")
 	public ResponseEntity<Movie> post(@RequestBody Movie movie) {
