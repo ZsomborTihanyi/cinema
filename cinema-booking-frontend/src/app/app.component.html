@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+  <button mat-button routerLink="/">
+    <mat-icon>home</mat-icon>
+    Cinema Booking
+  </button>
+  <div *ngIf="authService.isLoggedIn">
+    <button mat-button routerLink="/issues">My issues</button>
+    <button mat-button routerLink="/issues/add">New issues</button>
+    <span>Hello, {{ authService.user.username }}!</span>
+    <button mat-button (click)="logout()">Logout</button>
+  </div>
+  <div *ngIf="!authService.isLoggedIn">
+    <button mat-button routerLink="/login">Login</button>
+  </div>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
+

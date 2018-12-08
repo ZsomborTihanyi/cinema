@@ -9,7 +9,6 @@ Egy mozi pénztár online felületének megvalósítása.
 * Regisztráció
 * Bejelentkezés és kijelentkezés
 * Jegyvásárlás
-* Teremfoglalás
 * Foglalás lemondása
 * Filmek értékelése
 * Vetítések hozzáadása
@@ -28,11 +27,11 @@ Egy mozi pénztár online felületének megvalósítása.
   * Alapértelmezett szerepkör, vetítési időpontokat tekintheti meg.
   * Regisztrálhat az oldalra.
 * Regisztrált felhasználó
-  * Jegy(ek)et foglalhat, vagy esetleg egy egész termet is, magán célú használatra, vagy csak a vetítés megtekintésére.
+  * Jegy(ek)et foglalhat, a vetítésekre.
   * Lemondhatja a foglalásokat.
   * Értékelheti a filmeket.
 * Adminisztrátor
-  * Módosíthatja, vagy törölheti a vetítéseket, szélsőséges esetben a felhasználókat is.
+  * Módosíthatja, vagy törölheti a vetítéseket (szélsőséges esetben a felhasználókat is).
   
 ER diagram:
 ![alt text](https://github.com/ZsomborTihanyi/cinema/blob/master/ER_Diagram.png)
