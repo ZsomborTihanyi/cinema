@@ -13,10 +13,12 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import hu.elte.cinemabooking.entities.Hall;
 import hu.elte.cinemabooking.repositories.HallRepository;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/halls")
 public class HallController {
