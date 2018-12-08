@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import hu.elte.cinemabooking.entities.Booking;
 import hu.elte.cinemabooking.entities.ReservedSeat;
@@ -20,6 +21,7 @@ import hu.elte.cinemabooking.repositories.BookingRepository;
 import hu.elte.cinemabooking.repositories.ReservedSeatRepository;
 import hu.elte.cinemabooking.security.AuthenticatedUser;
 
+@CrossOrigin
 @Secured({"ROLE_ADMIN","ROLE_USER"})
 @RestController
 @RequestMapping("/bookings")

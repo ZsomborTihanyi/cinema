@@ -7,9 +7,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -35,7 +36,8 @@ public class Movie {
 	@NotNull
 	private String movieName;
 	
-	@Column
+	@Column(nullable = false)
+	@Enumerated(EnumType.STRING)
 	@NotNull
 	private String genre;
 	
@@ -53,4 +55,8 @@ public class Movie {
 	@ManyToMany(mappedBy = "movies")
 	@JsonIgnore
 	private List<User> users;
+	
+	public enum Status {
+        SCI_FI, COMEDY, ANIMATION
+    }
 }
