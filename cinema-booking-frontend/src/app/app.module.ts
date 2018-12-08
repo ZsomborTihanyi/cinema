@@ -3,7 +3,10 @@ import { NgModule } from '@angular/core';
 
 import {
   MatButtonToggleModule,
-  MatGridListModule
+  MatGridListModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatListModule
 } from '@angular/material';
 import { AppComponent } from './app.component';
 import { MovieListComponent } from './components/movies/movie-list/movie-list.component';
@@ -11,6 +14,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { GenreFilterComponent } from './components/movies/genre-filter/genre-filter.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainPageComponent } from './components/main-page/main-page.component';
+import { RoutingModule } from './routing/routing/routing.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +28,10 @@ import { MainPageComponent } from './components/main-page/main-page.component';
     HttpClientModule,
     MatButtonToggleModule,
     MatGridListModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatListModule,
+    RoutingModule,
     BrowserAnimationsModule
   ],
   providers: [],

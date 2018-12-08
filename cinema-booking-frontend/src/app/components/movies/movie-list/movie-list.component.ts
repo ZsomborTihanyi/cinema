@@ -20,10 +20,10 @@ export class MovieListComponent implements OnInit {
 
   async ngOnInit() {
     this.movies = await this.movieService.getMovies();
-    this.filterIssues();
+    this.filterMovies();
   }
 
-  filterIssues() {
+  filterMovies() {
     this.filteredByGenre = this.selectedGenre === ''
       ? this.movies
       : this.movies.filter(movie => movie.genre === this.selectedGenre);
@@ -31,7 +31,8 @@ export class MovieListComponent implements OnInit {
 
   onFilterChange(data) {
     this.selectedGenre = data;
-    this.filterIssues();
+    this.filterMovies();
+    
   }
 
 }
