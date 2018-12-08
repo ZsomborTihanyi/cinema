@@ -10,7 +10,7 @@
     [class.selected]="movie === selectedMovie"
     [routerLink]="['/movies', movie.id]"
   >
-    <mat-icon *ngIf="movie.genre === 'SCI-FI'"   matListIcon style="color: green">android</mat-icon>
+    <mat-icon *ngIf="movie.genre === 'SCI_FI'"   matListIcon style="color: green">android</mat-icon>
     <mat-icon *ngIf="movie.genre === 'COMEDY'" matListIcon style="color: yellow">sentiment_very_satisfied</mat-icon>
     <mat-icon *ngIf="movie.genre === 'ANIMATION'"  matListIcon style="color: brown">brush</mat-icon>
     <h3 matLine>{{ movie.title }}</h3>

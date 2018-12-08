@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class GenreFilterComponent implements OnInit {
 
-  @Input('genre') selectedGenre = 'SCI-FI'
+  @Input('genre') selectedGenre = 'SCI_FI'
   @Output() change = new EventEmitter<string>();
 
   constructor() { }

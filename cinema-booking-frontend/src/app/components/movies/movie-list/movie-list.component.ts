@@ -11,7 +11,7 @@ export class MovieListComponent implements OnInit {
 
   movies: Movie[] = [];
   filteredByGenre = [];
-  selectedGenre = 'SCI-FI';
+  selectedGenre = 'SCI_FI';
   selectedMovie = null;
 
   constructor(
