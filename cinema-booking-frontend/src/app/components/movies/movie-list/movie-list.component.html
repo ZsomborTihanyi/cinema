@@ -15,9 +15,8 @@
     <mat-icon *ngIf="movie.genre === 'ANIMATION'"  matListIcon style="color: brown">brush</mat-icon>
     <h3 matLine>{{ movie.title }}</h3>
     <small matLine>
-      <mat-icon>place</mat-icon> {{ movie.place }}
-      <mat-icon>access_time</mat-icon> {{ movie.updated_at }}
+      <mat-icon>access_time</mat-icon> {{ movie.runtime }}
     </small>
     <p matLine>{{ movie.description }}</p>
   </a>
-</mat-nav-list>
+</mat-grid-list>

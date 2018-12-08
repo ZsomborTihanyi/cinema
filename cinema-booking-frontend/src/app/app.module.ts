@@ -10,12 +10,14 @@ import { MovieListComponent } from './components/movies/movie-list/movie-list.co
 import { HttpClientModule } from "@angular/common/http";
 import { GenreFilterComponent } from './components/movies/genre-filter/genre-filter.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MainPageComponent } from './components/main-page/main-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieListComponent,
-    GenreFilterComponent
+    GenreFilterComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
