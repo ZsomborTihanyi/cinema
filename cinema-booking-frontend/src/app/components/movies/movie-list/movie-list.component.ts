@@ -9,6 +9,8 @@ import { Movie } from 'src/app/classes/movie';
 export class MovieListComponent implements OnInit {
 
   movies: Movie[] = [];
+  filteredByGenre = [];
+  selectedMovie = null;
 
   constructor() { }
 
