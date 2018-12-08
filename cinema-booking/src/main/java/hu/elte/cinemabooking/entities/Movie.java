@@ -39,7 +39,7 @@ public class Movie {
 	@Column(nullable = false)
 	@Enumerated(EnumType.STRING)
 	@NotNull
-	private String genre;
+	private Genre genre;
 	
 	@Column
 	@NotNull
@@ -56,7 +56,7 @@ public class Movie {
 	@JsonIgnore
 	private List<User> users;
 	
-	public enum Status {
+	public enum Genre {
         SCI_FI, COMEDY, ANIMATION
     }
 }

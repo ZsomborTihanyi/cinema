@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import hu.elte.cinemabooking.entities.Movie;
 import hu.elte.cinemabooking.entities.User;
 import hu.elte.cinemabooking.repositories.UserRepository;
+import hu.elte.cinemabooking.security.AuthenticatedUser;
 
 @CrossOrigin
 @RestController
@@ -28,6 +29,10 @@ public class UserController {
     
     @Autowired
     private UserRepository userRepository;
+    
+    @Autowired 
+    private AuthenticatedUser authenticatedUser;
+
 
     @PostMapping("register")
     public ResponseEntity<User> register(@RequestBody User user) {
@@ -42,8 +47,8 @@ public class UserController {
     }
 
     @PostMapping("login")
-    public ResponseEntity login(@RequestBody User user) {
-        return ResponseEntity.ok().build();
+    public ResponseEntity<User> login() {
+        return ResponseEntity.ok(authenticatedUser.getUser());
     }
     
     @Secured({"ROLE_ADMIN", "ROLE_USER"})
