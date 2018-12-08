@@ -9,6 +9,8 @@
     (click)="selectedMovie = movie"
     [class.selected]="movie === selectedMovie"
     [routerLink]="['/movies', movie.id]"
+    matTooltip="Click for description"
+    matTooltipPosition="below"
   >
     <mat-icon *ngIf="movie.genre === 'SCI_FI'"   matListIcon style="color: green">android</mat-icon>
     <mat-icon *ngIf="movie.genre === 'COMEDY'" matListIcon style="color: yellow">sentiment_very_satisfied</mat-icon>
@@ -17,6 +19,5 @@
     <small matLine>
       <mat-icon>access_time</mat-icon> {{ movie.runtime }}
     </small>
-    <p matLine>{{ movie.description }}</p>
   </a>
 </mat-nav-list>

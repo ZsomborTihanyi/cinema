@@ -6,7 +6,8 @@ import {
   MatGridListModule,
   MatToolbarModule,
   MatIconModule,
-  MatListModule
+  MatListModule,
+  MatTooltipModule
 } from '@angular/material';
 import { AppComponent } from './app.component';
 import { MovieListComponent } from './components/movies/movie-list/movie-list.component';
@@ -32,6 +33,7 @@ import { RoutingModule } from './routing/routing/routing.module';
     MatIconModule,
     MatListModule,
     RoutingModule,
+    MatTooltipModule,
     BrowserAnimationsModule
   ],
   providers: [],
