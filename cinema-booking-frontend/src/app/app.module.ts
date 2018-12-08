@@ -16,13 +16,15 @@ import { GenreFilterComponent } from './components/movies/genre-filter/genre-fil
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { RoutingModule } from './routing/routing/routing.module';
+import { MovieDetailComponent } from './components/movies/movie-detail/movie-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieListComponent,
     GenreFilterComponent,
-    MainPageComponent
+    MainPageComponent,
+    MovieDetailComponent
   ],
   imports: [
     BrowserModule,

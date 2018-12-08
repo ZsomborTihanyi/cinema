@@ -8,7 +8,7 @@
   <a *ngFor="let movie of filteredByGenre" mat-list-item
     (click)="selectedMovie = movie"
     [class.selected]="movie === selectedMovie"
-    [routerLink]="['/movies', movie.id]"
+    [routerLink]="['/movies', movie.movieId]"
     matTooltip="Click for description"
     matTooltipPosition="below"
   >
