@@ -23,6 +23,8 @@ import { BookingListComponent } from './components/bookings/booking-list/booking
 import { BookingDetailComponent } from './components/bookings/booking-detail/booking-detail.component';
 import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ScreeningListComponent } from './components/screenings/screening-list/screening-list.component';
+import { ScreeningDetailComponent } from './components/screenings/screening-detail/screening-detail.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     MovieDetailComponent,
     BookingListComponent,
     BookingDetailComponent,
-    LoginComponent
+    LoginComponent,
+    ScreeningListComponent,
+    ScreeningDetailComponent
   ],
   imports: [
     BrowserModule,

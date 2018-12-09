@@ -4,7 +4,8 @@
     Cinema Booking
   </button>
 <div *ngIf="authService.isLoggedIn">
-
+  <button mat-button routerLink="/movies">Movies</button>
+  <button mat-button routerLink="/screenings">Screenings</button>
   <button mat-button routerLink="/bookings">My bookings</button>
 </div>
 <div *ngIf="!authService.isLoggedIn">

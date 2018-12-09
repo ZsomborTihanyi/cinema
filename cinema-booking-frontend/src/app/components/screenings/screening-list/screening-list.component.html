@@ -1,0 +1,13 @@
+<h2>Screenings</h2>
+
+<mat-nav-list cols="2" rowHeight="2:1">
+    <a *ngFor="let screening of screenings" mat-list-item
+    (click)="selectedScreening = screening"
+    [class.selected]="screening === selectedScreening"
+    [routerLink]="['/screenings', screening.screeningId]"
+    matTooltip="Click for description"
+    matTooltipPosition="below"
+  >
+  <h3 matLine>{{ screening.hall_id }}</h3>
+  </a>
+</mat-nav-list>

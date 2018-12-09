@@ -7,6 +7,8 @@ import { BookingListComponent } from 'src/app/components/bookings/booking-list/b
 import { BookingDetailComponent } from 'src/app/components/bookings/booking-detail/booking-detail.component';
 import { LoginComponent } from 'src/app/components/login/login.component';
 import { AuthGuard } from 'src/app/auth.guard';
+import { ScreeningDetailComponent } from 'src/app/components/screenings/screening-detail/screening-detail.component';
+import { ScreeningListComponent } from 'src/app/components/screenings/screening-list/screening-list.component';
 
 const routes : Routes = [
   {
@@ -31,6 +33,16 @@ const routes : Routes = [
   {
     path: 'bookings/:id',
     component: BookingDetailComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'screenings',
+    component: ScreeningListComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'screenings/:id',
+    component: ScreeningDetailComponent,
     canActivate: [AuthGuard]
   },
   {
