@@ -17,6 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { RoutingModule } from './routing/routing/routing.module';
 import { MovieDetailComponent } from './components/movies/movie-detail/movie-detail.component';
+import { BookingListComponent } from './components/bookings/booking-list/booking-list.component';
+import { BookingDetailComponent } from './components/bookings/booking-detail/booking-detail.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { MovieDetailComponent } from './components/movies/movie-detail/movie-det
     MovieListComponent,
     GenreFilterComponent,
     MainPageComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    BookingListComponent,
+    BookingDetailComponent
   ],
   imports: [
     BrowserModule,
