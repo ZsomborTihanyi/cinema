@@ -31,6 +31,16 @@ public class ScreeningController {
 		return ResponseEntity.ok(screeningRepository.findAll());
 	}
 	
+	@GetMapping("/{id}")
+	public ResponseEntity<Screening> get(@PathVariable Integer id) {
+		Optional<Screening> screening = screeningRepository.findById(id);
+		if(screening.isPresent()) {
+			return ResponseEntity.ok(screening.get());
+		} else {
+			return ResponseEntity.notFound().build();
+		}
+	}
+	
 	@Secured({"ROLE_ADMIN"})
 	@PostMapping("")
 	public ResponseEntity<Screening> post(@RequestBody Screening screening) {

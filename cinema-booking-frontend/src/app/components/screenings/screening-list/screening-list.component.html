@@ -4,10 +4,10 @@
     <a *ngFor="let screening of screenings" mat-list-item
     (click)="selectedScreening = screening"
     [class.selected]="screening === selectedScreening"
-    [routerLink]="['/screenings', screening.screeningId]"
+    [routerLink]="['/screenings', screening.id]"
     matTooltip="Click for description"
     matTooltipPosition="below"
   >
-  <h3 matLine>{{ screening.hall_id }}</h3>
+  <h3 matLine>{{ screening.id }}</h3>
   </a>
 </mat-nav-list>

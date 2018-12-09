@@ -37,13 +37,11 @@ const routes : Routes = [
   },
   {
     path: 'screenings',
-    component: ScreeningListComponent,
-    canActivate: [AuthGuard]
+    component: ScreeningListComponent
   },
   {
     path: 'screenings/:id',
-    component: ScreeningDetailComponent,
-    canActivate: [AuthGuard]
+    component: ScreeningDetailComponent
   },
   {
     path: 'login',

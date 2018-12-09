@@ -3,7 +3,7 @@ import { Screening } from 'src/app/classes/screening';
 import { ScreeningService } from 'src/app/services/screening.service';
 
 @Component({
-  selector: 'app-screening-list',
+  selector: 'screening-list',
   templateUrl: './screening-list.component.html',
   styleUrls: ['./screening-list.component.css']
 })

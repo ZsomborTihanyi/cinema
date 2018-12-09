@@ -4,7 +4,7 @@ import { ScreeningService } from 'src/app/services/screening.service';
 import { Screening } from 'src/app/classes/screening';
 
 @Component({
-  selector: 'app-screening-detail',
+  selector: 'screening-detail',
   templateUrl: './screening-detail.component.html',
   styleUrls: ['./screening-detail.component.css']
 })

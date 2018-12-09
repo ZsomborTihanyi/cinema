@@ -47,5 +47,6 @@ public class Screening {
 	
 	@ManyToOne
 	@JoinColumn(name = "MOVIE_ID")
+	@JsonIgnoreProperties({"movieId","description"})
 	private Movie movie;
 }
