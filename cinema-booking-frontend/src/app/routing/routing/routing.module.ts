@@ -9,6 +9,7 @@ import { LoginComponent } from 'src/app/components/login/login.component';
 import { AuthGuard } from 'src/app/auth.guard';
 import { ScreeningDetailComponent } from 'src/app/components/screenings/screening-detail/screening-detail.component';
 import { ScreeningListComponent } from 'src/app/components/screenings/screening-list/screening-list.component';
+import { MovieEditComponent } from 'src/app/components/movies/movie-edit/movie-edit.component';
 
 const routes : Routes = [
   {
@@ -24,6 +25,19 @@ const routes : Routes = [
     path: 'movies/:id',
     component: MovieDetailComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'movies/add',
+    component: MovieEditComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'movies/:id/edit',
+    component: MovieEditComponent,
+    canActivate: [AuthGuard],
+    data: {
+      roles: ['ROLE_ADMIN']
+    }
   },
   {
     path: 'bookings',
