@@ -52,6 +52,7 @@ public class User {
     @JoinTable(name = "SEEN_BY",
     	    joinColumns={@JoinColumn(name="user_id", referencedColumnName="user_id")},
     	    inverseJoinColumns={@JoinColumn(name="movie_id", referencedColumnName="movie_id")})
+    @JsonIgnore
     private List<Movie> movies;
     
     public enum Role {

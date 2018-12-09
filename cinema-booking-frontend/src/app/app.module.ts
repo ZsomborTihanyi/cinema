@@ -7,7 +7,9 @@ import {
   MatToolbarModule,
   MatIconModule,
   MatListModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatFormFieldModule,
+  MatInputModule
 } from '@angular/material';
 import { AppComponent } from './app.component';
 import { MovieListComponent } from './components/movies/movie-list/movie-list.component';
@@ -20,6 +22,7 @@ import { MovieDetailComponent } from './components/movies/movie-detail/movie-det
 import { BookingListComponent } from './components/bookings/booking-list/booking-list.component';
 import { BookingDetailComponent } from './components/bookings/booking-detail/booking-detail.component';
 import { LoginComponent } from './components/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -42,6 +45,9 @@ import { LoginComponent } from './components/login/login.component';
     MatListModule,
     RoutingModule,
     MatTooltipModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatInputModule,
     BrowserAnimationsModule
   ],
   providers: [],

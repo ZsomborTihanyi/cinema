@@ -57,6 +57,7 @@ public class UserController {
 		return ResponseEntity.ok(userRepository.findAll());
 	}
     
+    
     @Secured({"ROLE_ADMIN", "ROLE_USER"})
     @GetMapping("{/id}/movies")
     public ResponseEntity<Iterable<Movie>> movies(@PathVariable Long id) {
@@ -67,4 +68,5 @@ public class UserController {
     		return ResponseEntity.notFound().build();
     	}
     }
+    
 }
