@@ -3,6 +3,8 @@ import { MainPageComponent } from 'src/app/components/main-page/main-page.compon
 import { MovieListComponent } from 'src/app/components/movies/movie-list/movie-list.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MovieDetailComponent } from 'src/app/components/movies/movie-detail/movie-detail.component';
+import { BookingListComponent } from 'src/app/components/bookings/booking-list/booking-list.component';
+import { BookingDetailComponent } from 'src/app/components/bookings/booking-detail/booking-detail.component';
 
 const routes : Routes = [
   {
@@ -16,6 +18,14 @@ const routes : Routes = [
   {
     path: 'movies/:id',
     component: MovieDetailComponent
+  },
+  {
+    path: 'bookings',
+    component: BookingListComponent
+  },
+  {
+    path: 'bookings/:id',
+    component: BookingDetailComponent
   }
 ];
 
