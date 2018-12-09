@@ -5,6 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { MovieDetailComponent } from 'src/app/components/movies/movie-detail/movie-detail.component';
 import { BookingListComponent } from 'src/app/components/bookings/booking-list/booking-list.component';
 import { BookingDetailComponent } from 'src/app/components/bookings/booking-detail/booking-detail.component';
+import { LoginComponent } from 'src/app/components/login/login.component';
+import { AuthGuard } from 'src/app/auth.guard';
 
 const routes : Routes = [
   {
@@ -13,19 +15,27 @@ const routes : Routes = [
   },
   {
     path: 'movies',
-    component: MovieListComponent
+    component: MovieListComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'movies/:id',
-    component: MovieDetailComponent
+    component: MovieDetailComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'bookings',
-    component: BookingListComponent
+    component: BookingListComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'bookings/:id',
-    component: BookingDetailComponent
+    component: BookingDetailComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 ];
 

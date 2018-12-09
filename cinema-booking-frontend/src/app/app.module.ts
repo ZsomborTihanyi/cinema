@@ -19,6 +19,7 @@ import { RoutingModule } from './routing/routing/routing.module';
 import { MovieDetailComponent } from './components/movies/movie-detail/movie-detail.component';
 import { BookingListComponent } from './components/bookings/booking-list/booking-list.component';
 import { BookingDetailComponent } from './components/bookings/booking-detail/booking-detail.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { BookingDetailComponent } from './components/bookings/booking-detail/boo
     MainPageComponent,
     MovieDetailComponent,
     BookingListComponent,
-    BookingDetailComponent
+    BookingDetailComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
