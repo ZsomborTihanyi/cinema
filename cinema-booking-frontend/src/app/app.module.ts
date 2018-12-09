@@ -25,6 +25,8 @@ import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ScreeningListComponent } from './components/screenings/screening-list/screening-list.component';
 import { ScreeningDetailComponent } from './components/screenings/screening-detail/screening-detail.component';
+import { MovieFormComponent } from './components/movies/movie-form/movie-form.component';
+import { MovieEditComponent } from './components/movies/movie-edit/movie-edit.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { ScreeningDetailComponent } from './components/screenings/screening-deta
     BookingDetailComponent,
     LoginComponent,
     ScreeningListComponent,
-    ScreeningDetailComponent
+    ScreeningDetailComponent,
+    MovieFormComponent,
+    MovieEditComponent
   ],
   imports: [
     BrowserModule,

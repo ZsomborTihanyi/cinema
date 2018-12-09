@@ -1,0 +1,7 @@
+<h1>{{ name }}</h1>
+
+<movie-form
+  [movie]="movie"
+  (save)="onFormSave($event)"
+  [showStatus]="authService.user.role === 'ROLE_ADMIN'"
+></movie-form>

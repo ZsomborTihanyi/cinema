@@ -1,4 +1,4 @@
-
-.navbar { 
-    background-color: #302e2e;
-}
+.mat-toolbar.mat-primary {
+    background: #adadad;
+    color: #fff;
+  }

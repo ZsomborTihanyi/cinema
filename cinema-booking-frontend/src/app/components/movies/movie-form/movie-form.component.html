@@ -1,0 +1,45 @@
+<form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input matInput placeholder="Title" formControlName="name"
+        required
+      >
+      <mat-error *ngIf="name.invalid && (name.dirty || name.touched) && name.errors.required">
+        Title is required!
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="showGenre">
+      <mat-select placeholder="Genre" formControlName="genre"
+        required
+      >
+        <mat-option value="SCI_FI">Sci-fi</mat-option>
+        <mat-option value="ANIMATION">Animation</mat-option>
+        <mat-option value="COMEDY">Comedy</mat-option>
+      </mat-select>
+      <mat-error *ngIf="genre.invalid && (genre.dirty || genre.touched) && genre.errors.required">
+        Genre is required!
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Runtime" formControlName="runtime"
+          required
+        >
+        <mat-error *ngIf="runtime.invalid && (runtime.dirty || runtime.touched) && runtime.errors.required">
+          Runtime is required!
+        </mat-error>
+      </mat-form-field>
+
+    <mat-form-field>
+        <textarea matInput placeholder="Description" formControlName="description"></textarea>
+      </mat-form-field>
+  
+    <button mat-flat-button color="primary"
+      type="submit"
+      [disabled]="movieForm.invalid"
+    >Save</button>
+  
+  </form>
+  {{movie | json}}
+  {{movieForm.value | json}}
+  {{movieForm.valid | json}}
