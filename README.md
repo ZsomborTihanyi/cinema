@@ -70,3 +70,53 @@ EK diagrammok különböző jogosulságok esetén:
 
 Egy végpont működése:
 ![alt text](https://github.com/ZsomborTihanyi/cinema/blob/master/EK%20diagram.png)
+
+## Könyvtárstruktúra
+
+- classes
+	- movie.ts
+	- booking.ts
+	- user.ts
+	- screening.ts
+- components
+	- main-page
+	- bookings
+		- booking-detail
+		- booking-list
+	- movies
+		- movie-list
+		- movie-detail
+		- movie-form
+		- movie-edit
+		- genre-filter
+	- screenings
+		- screening-detail
+		- screening-list
+- routing
+- services
+	
+
+## Felhasználói dokumentáció
+
+### Követelmények
+
+* Node.js minimum 8.0-s verziója
+* Npm minimum 5.2-s verziója
+* Eclipse IDE vagy Netbeans IDE
+
+### Telepítés
+
+1. Látogasson el a https://github.com/ZsomborTihanyi/cinema/ oldalra.
+2. Itt kattintson a "Clone and Download" gombra, és azon belül kattintson a "Download as Zip" gombra.
+3. A letöltött állományt csomagoljuk ki.
+4. A cinema-booking-frontend mappán belül parancssorban indítson egy npm install parancsot.
+5. Ha kész az installálás akkor indítson egy npm start parancsot.
+6. Indítsa el a felsoroltak közül valamelyik fejlesztői környezetet.
+7. A letöltött zipben található cinema-booking mappát nyissa meg, mint projektet.
+8. Futtassa a projektet.
+
+### Használat
+
+- Az oldalon bejelentkezés után megtekintheti a 
+	- Filmeket
+	- Vetítéseket
