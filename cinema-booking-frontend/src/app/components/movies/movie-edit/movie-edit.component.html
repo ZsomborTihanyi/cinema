@@ -3,5 +3,5 @@
 <movie-form
   [movie]="movie"
   (save)="onFormSave($event)"
-  [showStatus]="authService.user.role === 'ROLE_ADMIN'"
+  [showGenre]="authService.user.role === 'ROLE_ADMIN'"
 ></movie-form>

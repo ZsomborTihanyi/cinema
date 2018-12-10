@@ -4,4 +4,8 @@ export class Movie {
     genre = ''
     runtime = ''
     description = ''
+
+    public ToString() {
+        return this.name + ' ' + this.genre + ' ' + this.runtime;
+    }
 }

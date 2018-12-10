@@ -6,7 +6,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-movie-edit',
+  selector: 'movie-edit',
   templateUrl: './movie-edit.component.html',
   styleUrls: ['./movie-edit.component.css']
 })

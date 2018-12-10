@@ -9,7 +9,8 @@ import {
   MatListModule,
   MatTooltipModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatSelectModule
 } from '@angular/material';
 import { AppComponent } from './app.component';
 import { MovieListComponent } from './components/movies/movie-list/movie-list.component';
@@ -56,6 +57,7 @@ import { MovieEditComponent } from './components/movies/movie-edit/movie-edit.co
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatSelectModule,
     BrowserAnimationsModule
   ],
   providers: [],
